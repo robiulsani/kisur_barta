@@ -1,0 +1,121 @@
+{% extends "dashboard/index.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/breaking.css'%}">
+{% include "dashboard/brakingnews/add_modal.html" %}
+
+
+{% block content %}
+
+
+<h1 class="text-center"> Breaking</h1>
+        
+           
+          <div class="card-tp">
+            <h3 class="b-title">Breaking</h3>
+              <a
+              href="#"
+              id="add_braking"
+              data-bs-toggle="modal"
+              class="btn btn-primary er fs-6 p-6 ms-auto"
+             
+            >
+              <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
+              <span class="badge-btn">
+               
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <rect opacity="0.5" x="11.364" y="20.364" width="16" height="2" rx="1" transform="rotate(-90 11.364 20.364)" fill="currentColor"/>
+                  <rect
+                    x="4.36396"
+                    y="11.364"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    fill="currentColor"
+                  />
+                </svg>
+                Add popup
+              </span>
+              <!--end::Svg Icon--></a>
+              </div>
+
+
+          {% comment %} nain section {% endcomment %}
+          <div class="body">
+              <div class="users-table table-wrapper">
+              <table class="posts-table">
+                <thead>
+                  <tr class="users-table-info">
+                    <th>
+                      
+                    </th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <label class="users-table__checkbox">
+                        <input type="checkbox" class="check">
+                        <div class="categories-table-img">
+                          <picture><source srcset="./img/categories/01.webp" type="image/webp"><img src="./img/categories/01.jpg" alt="category"></picture>
+                        </div>
+                      </label>
+                    </td>
+                    <td>
+                      Starting your traveling blog with Vasco
+                    </td>
+                    <td>
+                      <div class="pages-table-img">
+                        <picture><source srcset="./img/avatar/avatar-face-04.webp" type="image/webp"><img src="./img/avatar/avatar-face-04.png" alt="User Name"></picture>
+                        Jenny Wilson
+                      </div>
+                    </td>
+                    <td><span class="badge-pending">Pending</span></td>
+                    <td>17.04.2021</td>
+                    <td>
+                      <span class="p-relative">
+                        <button class="dropdown-btn transparent-btn" type="button" title="More info">
+                          <div class="sr-only">More info</div>
+                          <i data-feather="more-horizontal" aria-hidden="true"></i>
+                        </button>
+                        <ul class="users-item-dropdown dropdown">
+                          <li><a href="##">Edit</a></li>
+                          <li><a href="##">Quick edit</a></li>
+                          <li><a href="##">Trash</a></li>
+                        </ul>
+                      </span>
+                    </td>
+                  </tr>
+                  
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+         
+
+
+{% endblock content %}
+
+{% comment %} scripts {% endcomment %}
+{% block script %}
+<script>
+  
+  $(document).ready(function () {
+    $("body").on("click", "#add_braking", function(){
+      $("#kt_modal_add_breaking").modal("show")
+    });
+    
+  })
+
+   
+
+</script>
+
+{% endblock script %}
+
